@@ -493,6 +493,77 @@ position: relative;
 
 }
 
+/* FOOTER FORM */
+
+.container-form-footer {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    
+}
+
+.footer-signin {
+    display: flex;
+    gap: 12px;
+}
+
+
+.footer-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-input {
+    background-color: transparent;
+    width: 358px;
+    height: 50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 15px 16px;
+
+    color: #fff;
+    transition: border-color 250ms var(--cubic);
+}
+
+
+.footer-input:hover, .footer-input:focus {
+    border-color: #2196F3;
+}
+
+.footer-btn {
+    display: flex;
+    align-items: center;
+    padding-left: 29px;
+    padding-right: 29px;
+    height: 50px;
+    border: 0;
+    border-radius: 4px;
+      
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);  
+    letter-spacing: 0.06em;
+
+    background-color: #2196F3;
+    color: #FFFFFF;
+
+
+    transition: background-color 250ms var(--cubic);
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+    background-color: var(--accent-btn-cl);
+}
+
+.icon-btn {
+    margin-left: 10px;
+    fill: #FFFFFF;
+}
+
 /* Portfolio page */
 
 .filters-list {
@@ -712,6 +783,7 @@ position: relative;
 .footer-socials {
     display: flex;
     flex-direction: column;
+    
 
 }
 
