@@ -535,6 +535,8 @@ position: relative;
 .footer-btn {
     display: flex;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 29px;
     padding-right: 29px;
     height: 50px;
@@ -868,3 +870,138 @@ position: relative;
     cursor: pointer;
 }
 
+/* FORM MODAL */
+
+.form-modal {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 40px;
+}
+
+.form-field {
+    display: inline-block;
+    position: relative;
+}
+
+.modal-title {
+    color: var(--primary-txt-cl);
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+}
+
+.input-modal {
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+}
+
+.label-modal {
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+
+    margin-bottom: 4px;
+}
+
+.label-modal~.label-modal {
+    margin-top: 10px;
+}
+
+.textarea-modal {
+    height: 120px;
+    resize: none;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+}
+
+.link-modal {
+    color: var(--accent-cl);
+}
+
+.icon-modal {
+    position: absolute;
+    left: 12px;
+    bottom: 50%;
+    transform: translateY(50%);
+    fill: var(--main-color);
+    transition: fill 250ms var(--cubic);
+}
+
+.input-modal:focus {
+    border-color: var(--accent-cl);
+}
+
+.input-modal:focus+.icon-modal {
+    fill: var(--accent-cl);
+}
+
+.modal-btn {
+    display: block;
+    margin: 0 auto;
+
+    background-color: var(--accent-cl);
+    color: var(--white-cl);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.88;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+
+    padding: 10px 55px;
+    margin-top: 30px;
+
+    border: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    transition: background-color 250ms var(--cubic);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: #188CE8;
+}
+
+.check-box {
+    display: flex;
+    justify-content: center;
+}
+
+.label-check {
+    display: flex;
+    align-items: center;
+}
+
+.check-on {
+    border-radius: 2px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 250ms var(--cubic);
+}
+
+.check:checked+.check-on {
+    opacity: 1;
+    background-color: var(--accent-cl);
+}
+
+.check-off {
+    opacity: 1;
+}
+
+.check:checked~.check-off {
+    opacity: 0;
+}
+
+.check-text {
+    font-size: 14px;
+    margin-left: 7px;
+}
