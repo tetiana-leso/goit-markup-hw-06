@@ -522,6 +522,7 @@ position: relative;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding: 15px 16px;
+    outline: transparent;
 
     color: #fff;
     transition: border-color 250ms var(--cubic);
@@ -870,6 +871,16 @@ position: relative;
     cursor: pointer;
 }
 
+.svg-close-modal {
+    fill: #000;
+    transition: fill 250ms var(--cubic);
+}
+
+.button-close-modal:hover .svg-close-modal,
+.button-close-modal:focus .svg-close-modal {
+    fill: var(--accent-cl);
+}
+
 /* FORM MODAL */
 
 .form-modal {
@@ -900,20 +911,22 @@ position: relative;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
+    cursor: pointer;
+
+    transition: border-color 250ms var(--cubic);
 }
 
 .label-modal {
-    color: var(--secondary-color);
+    color: var(--secondary-txt-cl);
     font-weight: 400;
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
 
     margin-bottom: 4px;
-}
-
-.label-modal~.label-modal {
     margin-top: 10px;
+
+    
 }
 
 .textarea-modal {
@@ -932,15 +945,17 @@ position: relative;
     left: 12px;
     bottom: 50%;
     transform: translateY(50%);
-    fill: var(--main-color);
+    fill: var(--primary-txt-cl);
     transition: fill 250ms var(--cubic);
 }
 
-.input-modal:focus {
+.input-modal:hover, .input-modal:focus {
     border-color: var(--accent-cl);
+    outline: transparent;
+    
 }
 
-.input-modal:focus+.icon-modal {
+.input-modal:focus+.icon-modal,.input-modal:hover+.icon-modal {
     fill: var(--accent-cl);
 }
 
@@ -948,23 +963,29 @@ position: relative;
     display: block;
     margin: 0 auto;
 
-    background-color: var(--accent-cl);
-    color: var(--white-cl);
+
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.88;
+    
     font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    
     letter-spacing: 0.06em;
 
-    padding: 10px 55px;
+    padding: 10px 52px;
     margin-top: 30px;
 
     border: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    cursor: pointer;
 
+    background-color: var(--accent-cl);
+    color: var(--white-cl);
     transition: background-color 250ms var(--cubic);
 }
+
+
 
 .modal-btn:hover,
 .modal-btn:focus {
