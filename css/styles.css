@@ -995,22 +995,25 @@ position: relative;
 .check-box {
     display: flex;
     justify-content: center;
-}
-
-.check-box:hover,
-.check-box:focus {
-    fill: var(--accent-cl);
-}
-.check-on:hover {
-    
+    transition: fill 250ms var(--cubic);
 }
 
 
-.label-check {
+ .check-box:hover .check-off {
+fill: var(--accent-cl);
+
+}
+
+.label-check { 
     display: flex;
     align-items: center;
     margin: 0;
 }
+ 
+.check-box:focus-within {
+    fill: var(--accent-cl);
+}
+
 
 .check-on {
     border-radius: 2px;
@@ -1026,12 +1029,8 @@ position: relative;
 
 .check-off {
     opacity: 1;
+    transition: fill 250ms var(--cubic);
 }
-
-.check-box:hover, .check-box:focus {
-    fill: var(--accent-cl);
-}
-
 
 
 .check:checked~.check-off {
